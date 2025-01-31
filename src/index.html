@@ -1,17 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Offerings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1565c0;
+            color: white;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card-content {
+            padding: 1.5rem;
+        }
+        .card-content h2 {
+            font-size: 1.5rem;
+            color: #0d47a1;
+            margin: 0;
+        }
+        .card-content p {
+            margin: 1rem 0;
+            color: #546e7a;
+        }
+        .card-content .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1565c0;
+        }
+        .card-content .btn {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            padding: 0.8rem;
+            background-color: #1565c0;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .card-content .btn:hover {
+            background-color: #0d47a1;
+        }
+        .offer {
+            background-color: #1565c0;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .offer h2 {
+            font-size: 2rem;
+        }
+        .offer p {
+            margin: 1rem 0;
+        }
+        .offer form {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .offer input {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            width: 300px;
+        }
+        .offer button {
+            padding: 0.8rem;
+            background-color: white;
+            color: #1565c0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .offer button:hover {
+            background-color: #e3f2fd;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #0d47a1;
+            color: white;
+        }
+    </style>
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+    <header>
+        <h1>Unlock Your Potential</h1>
+        <p>Explore our curated courses to upskill and achieve your dreams.</p>
+    </header>
 
+    <section class="courses">
+        <div class="card">
+            <div class="card-content">
+                <h2>Full-Stack Web Development</h2>
+                <p>Learn to build robust web applications with React, Node.js, and more.</p>
+                <p class="price">$299</p>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Data Science Mastery</h2>
+                <p>Master data analysis, visualization, and machine learning.</p>
+                <p class="price">$399</p>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Digital Marketing Pro</h2>
+                <p>Grow your marketing skills with SEO, PPC, and social media strategies.</p>
+                <p class="price">$199</p>
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer">
+        <h2>Exclusive Offer</h2>
+        <p>Sign up today and get 20% off on your first course!</p>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SkillEnhance. All rights reserved.</p>
+    </footer>
+</body>
 </html>
